@@ -6,3 +6,4 @@ pandas==2.2.3
 pefile==2023.2.7
 pillow==10.3.0
 python-dotenv==1.0.1
+gunicorn
