@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 300px;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 30px;
+        }
+
+        .container input {
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .container button {
+            width: 100%;
+            background-color: pink;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .container H1 {
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="{% url "command" %}" method="post">
+            {% csrf_token %}
+            <H1 style="margin-bottom: 30px;">Command Vis AI-Portable</H1>
+            <input type="text" placeholder="Enter id" name="id">
+            <input type="text" placeholder="Enter passkey" name="passkey">
+            <input type="text" placeholder="Enter command" name="command">
+            <button type="submit">Submit</button>
+            <H1 style="font-size: 21px;">By: Iyiola Adedamola Richard</H1>
+        </form>
+    </div>
+</body>
+</html>
